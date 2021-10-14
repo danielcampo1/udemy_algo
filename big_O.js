@@ -30,7 +30,7 @@
     
     logFirstTwoBoxes(boxes) // O(2)
 */
-    
+
 /*
 Big O cheat sheet:
 ----------------
@@ -60,7 +60,7 @@ o(n!) - you are adding a loop for every element
     Allocations
 
 */
-
+/*
 function Booo(n) {
     for(let i = 0; i< n.length; i++){
         console.log('boooo!!!');
@@ -78,3 +78,4 @@ function arrayofhiNTimes(n){
 }
 
 arrayofhiNTimes(6) //O(n)
+*/
