@@ -2,9 +2,8 @@
 google mock tech interview:
  https://www.youtube.com/watch?v=XKu_SEDAykw
 
-1. When the interviewer says the question, write down the key points at the top (i.e. sorted
+1. When the interviewer says the question, write down the key points at the top (i.e. sorted array). Make sure you have all the details. Show how organized you are.
 
-array). Make sure you have all the details. Show how organized you are.
 2. Make sure you double check: What are the inputs? What are the outputs?
 
 3. What is the most important value of the problem? Do you have time, and space and memory,etc.. What is the main goal?
