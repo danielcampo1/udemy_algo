@@ -76,4 +76,50 @@ class Wizard extends Player {
 const Wizard1 = new Wizard("shelly", "Healer");
 const Wizard2 = new Wizard("shawn", "Dark Magic");
 
+
 */
+
+class MyArry {
+  constructor() {
+    this.length = 0;
+    this.data = {};
+  }
+
+  get(index) {
+    return this.data[index];
+  }
+
+  push(item) {
+    this.data[this.length] = item;
+    this.length++;
+    return this.length;
+  }
+
+  pop() {
+    const lastItem = this.data[this.lenngth - 1];
+    delete this.data[this.length - 1];
+    this.length--;
+    return lastItem;
+  }
+
+  delete(index) {
+    const item = this.data[index];
+    this.shiftItems(index);
+  }
+
+  shiftItems(index) {
+    for (let i = index; i < this.length - 1; i++) {
+      this.data[i] = this.data[i + 1];
+    }
+    this.data[this.length + 1];
+    this.length--;
+  }
+}
+
+const newArry = new MyArry();
+newArry.push("hi"); //data: {0: 'hi'} length: 1
+newArry.push("you"); // data: {0: 'hi', 1: 'you'} length: 2
+newArry.push("!!!"); // data: {0: 'hi', 1: 'you', 3: '!!!'} length: 3
+// newArry.pop();
+newArry.delete(1);
+console.log(newArry);
