@@ -129,22 +129,58 @@ function reverse(str) {
 }
 console.log(reverse(str));
 
-*/
+//my attept
 const array1 = [0, 3, 4, 31];
 const array2 = [4, 6, 30];
 let newArray = [];
 
 function mergeSortedArrays(array1, array2) {
   for (let i = 0; i < array1.length; i++) {
-    for (let j = 0; j < array2.length; j++) {
-      if (array1[i] < array2[j]) {
-        newArray.push(array1[i]);
-      } else if (array2[j] < array1[i]) {
-        newArray.push(array2[j]);
-      }
+      for (let j = 0; j < array2.length; j++) {
+          if (array1[i] < array2[j]) {
+              newArray.push(array1[i]);
+            } else if (array2[j] < array1[i]) {
+                newArray.push(array2[j]);
+            }
+        }
     }
-  }
-  console.log(newArray);
+    console.log(newArray);
 }
 
+mergeSortedArrays(array1, array2);
+
+*/
+
+const array1 = [0, 3, 4, 31];
+const array2 = [4, 6, 30];
+
+function mergeSortedArrays(array1, array2) {
+  const mergedArray = [];
+  let array1Item = array1[0];
+  let array2Item = array2[0];
+  i = 1;
+  j = 1;
+
+  if (array1.length === 0) {
+    return array2;
+  }
+  if (array2.length === 0) {
+    return array2;
+  }
+
+  while (array1Item || array2Item) {
+    if (array1Item < array2Item) {
+      mergedArray.push(array1Item);
+      array1Item = array1[i];
+      i++;
+    } else {
+      mergedArray.push(array2Item);
+      array2Item = array2[j];
+      j++;
+    }
+  }
+
+  console.log(mergedArray);
+  return mergedArray;
+}
 mergeSortedArrays(array1, array2);
