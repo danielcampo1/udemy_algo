@@ -130,3 +130,21 @@ function reverse(str) {
 console.log(reverse(str));
 
 */
+const array1 = [0, 3, 4, 31];
+const array2 = [4, 6, 30];
+let newArray = [];
+
+function mergeSortedArrays(array1, array2) {
+  for (let i = 0; i < array1.length; i++) {
+    for (let j = 0; j < array2.length; j++) {
+      if (array1[i] < array2[j]) {
+        newArray.push(array1[i]);
+      } else if (array2[j] < array1[i]) {
+        newArray.push(array2[j]);
+      }
+    }
+  }
+  console.log(newArray);
+}
+
+mergeSortedArrays(array1, array2);
