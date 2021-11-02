@@ -77,43 +77,42 @@ const Wizard1 = new Wizard("shelly", "Healer");
 const Wizard2 = new Wizard("shawn", "Dark Magic");
 
 
-*/
 
 class MyArry {
-  constructor() {
-    this.length = 0;
+    constructor() {
+        this.length = 0;
     this.data = {};
-  }
+}
 
-  get(index) {
+get(index) {
     return this.data[index];
-  }
+}
 
-  push(item) {
+push(item) {
     this.data[this.length] = item;
     this.length++;
     return this.length;
-  }
+}
 
-  pop() {
+pop() {
     const lastItem = this.data[this.lenngth - 1];
     delete this.data[this.length - 1];
     this.length--;
     return lastItem;
-  }
+}
 
-  delete(index) {
+delete(index) {
     const item = this.data[index];
     this.shiftItems(index);
-  }
+}
 
-  shiftItems(index) {
+shiftItems(index) {
     for (let i = index; i < this.length - 1; i++) {
-      this.data[i] = this.data[i + 1];
+        this.data[i] = this.data[i + 1];
     }
     this.data[this.length + 1];
     this.length--;
-  }
+}
 }
 
 const newArry = new MyArry();
@@ -123,3 +122,11 @@ newArry.push("!!!"); // data: {0: 'hi', 1: 'you', 3: '!!!'} length: 3
 // newArry.pop();
 newArry.delete(1);
 console.log(newArry);
+
+const str = "Hi My name is Andrei";
+function reverse(str) {
+    return str.split("").reverse().join("");
+}
+console.log(reverse(str));
+
+*/
